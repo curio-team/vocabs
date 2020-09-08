@@ -110,6 +110,17 @@
         "": ""
       }
     },
+    "nl": {
+      "language": "Nederlands",
+      "title": "CSS Vocabulaire",
+      "help-text": "CSS Cheatsheet voor Nederlanders",
+      "credits": {
+        "Mark Hoekveen": "https://www.hoekveen.net"
+      },
+      "specs": {
+        "": ""
+      }
+    }
   },
   "html": {
     "en": {

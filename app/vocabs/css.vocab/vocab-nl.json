@@ -1,0 +1,99 @@
+{
+  "tokens": [
+    {
+      "name": "comment",
+      "text": "Commentaar",
+      "url": ""
+    },
+    {
+      "name": "statement",
+      "text": "Statement",
+      "url": ""
+    },
+    {
+      "name": "rule-set",
+      "text": "Regel",
+      "url": ""
+    },
+    {
+      "name": "media-query",
+      "text": "Media query",
+      "url": ""
+    },
+    {
+      "name": "block",
+      "text": "Blok",
+      "url": ""
+    },
+    {
+      "name": "selector",
+      "text": "Selector",
+      "url": ""
+    },
+    {
+      "name": "type-selector",
+      "text": "Type selector",
+      "url": ""
+    },
+    {
+      "name": "universal-selector",
+      "text": "Universal selector",
+      "url": ""
+    },
+    {
+      "name": "id-selector",
+      "text": "ID selector",
+      "url": ""
+    },
+    {
+      "name": "class-selector",
+      "text": "Class selector",
+      "url": ""
+    },
+    {
+      "name": "attribute-selector",
+      "text": "Attribuut selector",
+      "url": ""
+    },
+    {
+      "name": "pseudo-class",
+      "text": "Pseudo-class",
+      "url": ""
+    },
+    {
+      "name": "pseudo-element",
+      "text": "Pseudo-element",
+      "url": ""
+    },
+    {
+      "name": "child-combinator",
+      "text": "Kind van",
+      "url": ""
+    },
+    {
+      "name": "adjacent-sibling-combinator",
+      "text": "Direct naastgelegen",
+      "url": ""
+    },
+    {
+      "name": "general-sibling-combinator",
+      "text": "Indirect naastgelegen",
+      "url": ""
+    },
+    {
+      "name": "declaration",
+      "text": "Declaratie",
+      "url": "https://www.w3schools.com/css/css_syntax.asp"
+    },
+    {
+      "name": "property",
+      "text": "Eigenschap",
+      "url": "https://www.w3schools.com/css/css_syntax.asp"
+    },
+    {
+      "name": "value",
+      "text": "Waarde",
+      "url": "https://www.w3schools.com/css/css_syntax.asp"
+    }
+  ]
+}
