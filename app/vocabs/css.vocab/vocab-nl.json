@@ -3,82 +3,77 @@
     {
       "name": "comment",
       "text": "Commentaar",
-      "url": ""
-    },
-    {
-      "name": "statement",
-      "text": "Statement",
-      "url": ""
+      "url": "https://www.w3schools.com/css/css_comments.asp"
     },
     {
       "name": "rule-set",
-      "text": "Regel",
-      "url": ""
-    },
-    {
-      "name": "media-query",
-      "text": "Media query",
-      "url": ""
+      "text": "Regel Set",
+      "url": "https://www.w3schools.com/css/css_syntax.asp"
     },
     {
       "name": "block",
-      "text": "Blok",
-      "url": ""
+      "text": "Declaratie Blok",
+      "url": "https://www.w3schools.com/css/css_syntax.asp"
     },
     {
       "name": "selector",
       "text": "Selector",
-      "url": ""
+      "url": "https://www.w3schools.com/css/css_selectors.asp"
     },
     {
       "name": "type-selector",
       "text": "Type selector",
-      "url": ""
+      "url": "https://www.w3schools.com/css/css_selectors.asp"
     },
     {
       "name": "universal-selector",
-      "text": "Universal selector",
-      "url": ""
+      "text": "Alles selector",
+      "url": "https://www.w3schools.com/css/css_selectors.asp"
     },
     {
       "name": "id-selector",
-      "text": "ID selector",
-      "url": ""
+      "text": "Selectie op ID",
+      "url": "https://www.w3schools.com/css/css_selectors.asp"
     },
     {
       "name": "class-selector",
-      "text": "Class selector",
-      "url": ""
+      "text": "Selectie op class",
+      "url": "https://www.w3schools.com/css/css_selectors.asp"
     },
     {
       "name": "attribute-selector",
-      "text": "Attribuut selector",
-      "url": ""
+      "text": "Selectie op attribuut",
+      "url": "https://www.w3schools.com/css/css_attribute_selectors.asp"
     },
     {
       "name": "pseudo-class",
       "text": "Pseudo-class",
-      "url": ""
+      "url": "https://www.w3schools.com/css/css_pseudo_classes.asp"
     },
     {
       "name": "pseudo-element",
       "text": "Pseudo-element",
-      "url": ""
+      "url": "https://www.w3schools.com/css/css_pseudo_elements.asp"
     },
     {
       "name": "child-combinator",
       "text": "Kind van",
-      "url": ""
+      "url": "https://www.w3schools.com/css/css_combinators.asp"
+    },
+    {
+      "name": "descendant-combinator",
+      "text": "Kind (of kleinkind) van",
+      "url": "https://www.w3schools.com/css/css_combinators.asp"
     },
     {
       "name": "adjacent-sibling-combinator",
       "text": "Direct naastgelegen",
-      "url": ""
+      "url": "https://www.w3schools.com/css/css_combinators.asp"
     },
     {
       "name": "general-sibling-combinator",
       "text": "Indirect naastgelegen",
-      "url": ""
+      "url": "https://www.w3schools.com/css/css_combinators.asp"
     },
     {
       "name": "declaration",
@@ -94,6 +89,11 @@
       "name": "value",
       "text": "Waarde",
       "url": "https://www.w3schools.com/css/css_syntax.asp"
+    },
+    {
+      "name": "media-query",
+      "text": "Media query",
+      "url": "https://www.w3schools.com/css/css3_mediaqueries.asp"
     }
   ]
 }
