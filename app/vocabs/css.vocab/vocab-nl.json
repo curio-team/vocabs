@@ -2,47 +2,54 @@
   "tokens": [
     {
       "name": "comment",
-      "text": "Commentaar",
+	  "text": "Commentaar",
+	  "eng": "Comment",
       "url": "https://www.w3schools.com/css/css_comments.asp"
     },
     {
       "name": "rule-set",
-      "text": "Regel Set",
+	  "text": "Regel Set",
+	  "eng": "Rule Set",
       "url": "https://www.w3schools.com/css/css_syntax.asp"
     },
     {
       "name": "block",
-      "text": "Declaratie Blok",
+	  "text": "Declaratie Blok",
+	  "eng": "Declaration block",
       "url": "https://www.w3schools.com/css/css_syntax.asp"
     },
     {
       "name": "selector",
-      "text": "Selector",
+	  "text": "Selector",
       "url": "https://www.w3schools.com/css/css_selectors.asp"
     },
     {
       "name": "type-selector",
-      "text": "Type selector",
+	  "text": "Type selector",
       "url": "https://www.w3schools.com/css/css_selectors.asp"
     },
     {
       "name": "universal-selector",
-      "text": "Alles selector",
+	  "text": "Alles selector",
+	  "eng": "Universal selector",
       "url": "https://www.w3schools.com/css/css_selectors.asp"
     },
     {
       "name": "id-selector",
-      "text": "Selectie op ID",
+	  "text": "Selectie op ID",
+	  "eng": "ID selector",
       "url": "https://www.w3schools.com/css/css_selectors.asp"
     },
     {
       "name": "class-selector",
-      "text": "Selectie op class",
+	  "text": "Selectie op class",
+	  "eng": "Class selector",
       "url": "https://www.w3schools.com/css/css_selectors.asp"
     },
     {
       "name": "attribute-selector",
-      "text": "Selectie op attribuut",
+	  "text": "Selectie op attribuut",
+	  "eng": "Attribute selector",
       "url": "https://www.w3schools.com/css/css_attribute_selectors.asp"
     },
     {
@@ -57,42 +64,50 @@
     },
     {
       "name": "child-combinator",
-      "text": "Kind van",
+	  "text": "Kind van",
+	  "eng": "Child combinator",
       "url": "https://www.w3schools.com/css/css_combinators.asp"
     },
     {
       "name": "descendant-combinator",
-      "text": "Kind (of kleinkind) van",
+	  "text": "Kind (of kleinkind) van",
+	  "eng": "Descendant combinator",
       "url": "https://www.w3schools.com/css/css_combinators.asp"
     },
     {
       "name": "adjacent-sibling-combinator",
-      "text": "Direct naastgelegen",
+	  "text": "Direct naastgelegen",
+	  "eng": "Adjacent sibling combinator",
       "url": "https://www.w3schools.com/css/css_combinators.asp"
     },
     {
       "name": "general-sibling-combinator",
-      "text": "Indirect naastgelegen",
+	  "text": "Indirect naastgelegen",
+	  "eng": "General sibling combinator",
       "url": "https://www.w3schools.com/css/css_combinators.asp"
     },
     {
       "name": "declaration",
-      "text": "Declaratie",
+	  "text": "Declaratie",
+	  "eng": "Declaration",
       "url": "https://www.w3schools.com/css/css_syntax.asp"
     },
     {
       "name": "property",
-      "text": "Eigenschap",
+	  "text": "Eigenschap",
+	  "eng": "Property",
       "url": "https://www.w3schools.com/css/css_syntax.asp"
     },
     {
       "name": "value",
-      "text": "Waarde",
+	  "text": "Waarde",
+	  "eng": "Value",
       "url": "https://www.w3schools.com/css/css_syntax.asp"
     },
     {
       "name": "media-query",
-      "text": "Media query",
+	  "text": "Media query",
+	  "eng": "Media query",
       "url": "https://www.w3schools.com/css/css3_mediaqueries.asp"
     }
   ]
