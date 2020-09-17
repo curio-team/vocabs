@@ -16,19 +16,26 @@
 
   <div class="vocab-index">
     <div>
-      <h1 class="vocab-title">
-        Vocabs
-      </h1>
-      <p>by <?php echo $appCredits ?></p>
-      <br>
-      <?php echo vocabsLinkList($vocabs, $path, $uglyUrls); ?>
-      <br>
-      <?php echo $reportIssue ?>
-      <br>
-      <?php echo $createVocab ?>
-      <br>
-      <br>
-      <br>
+		<h1 class="vocab-title">
+		Vocabs
+		</h1>
+		<p>by <?php echo $appCredits ?></p>
+		<br>
+		<table class="vocab-links">
+			<tr class="language-nl">
+				<td class="vocab-link-link"><a href="?name=css&lang=nl">CSS</a></td>
+				<td class="vocab-link-language">Nederlands</td>
+				<td class="vocab-link-authors">auteur</td>
+			</tr>
+		</table>
+		<br>
+		<br>
+		<?php echo $reportIssue ?>
+		<br>
+		<?php echo $createVocab ?>
+		<br>
+		<br>
+		<br>
     </div>
   </div>
 
