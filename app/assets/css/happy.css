@@ -294,3 +294,10 @@ input:focus, button:focus, select:focus, textarea:focus {
 .vocab-tokens-list .eng {
 	float:right;
 }
+
+.vocab-sidebar .home {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 24px;
+}

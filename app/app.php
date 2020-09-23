@@ -74,7 +74,7 @@
           <?php echo $title ?>
         </h1>
       </div>
-
+	  <a class="home" href="/" title="Terug naar homepage">🏠</a>
       <?php
         $vocabFile = 'vocabs/'.$vocabName.'.vocab/vocab-'.$locale.'.json';
         $vocab = json_decode(file_get_contents($vocabFile),true);
