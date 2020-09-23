@@ -121,7 +121,9 @@ abbr {
 .vocab-index > div {
   width: 520px;
   flex-shrink: 1;
-  margin: auto; }
+  margin: auto;
+  margin-top: 200px;
+ }
 
 .vocab-index > div::before {
   content: '';
@@ -175,3 +177,30 @@ abbr {
     width: auto; }
   .vocab-link-language {
     color: rgba(51, 51, 51, 0.6); } }
+
+#big-vocab-list {
+	display:flex;
+	flex-flow: column nowrap;
+	align-content: center;
+	height: 50vh;
+	font-size:4rem;
+}
+
+#big-vocab-list .vocab-link {
+	flex: auto;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+}
+
+#big-vocab-list .vocab-link a {
+	font-size: 64px;
+	text-decoration: underline;
+}
+
+.vocab-index {
+	background-image: url('../curio.png');
+	background-repeat: no-repeat;
+	background-size: 25vw;
+	background-position: 50% 5%;
+}

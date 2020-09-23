@@ -19,23 +19,17 @@
 		<h1 class="vocab-title">
 		Vocabs
 		</h1>
-		<p>by <?php echo $appCredits ?></p>
+
+		<div id="big-vocab-list">
+			<div class="vocab-link" id="html">
+				<a href="?name=html&lang=en">HTML</a>
+			</div>
+			<div class="vocab-link" id="css">
+				<a href="?name=css&lang=nl">CSS</a>
+			</div>
+		</div>
 		<br>
-		<table class="vocab-links">
-			<tr class="language-nl">
-				<td class="vocab-link-link"><a href="?name=css&lang=nl">CSS</a></td>
-				<td class="vocab-link-language">Nederlands</td>
-				<td class="vocab-link-authors">auteur</td>
-			</tr>
-		</table>
-		<br>
-		<br>
-		<?php echo $reportIssue ?>
-		<br>
-		<?php echo $createVocab ?>
-		<br>
-		<br>
-		<br>
+		<p>Origineel door <?php echo $appCredits ?></p>
     </div>
   </div>
 
