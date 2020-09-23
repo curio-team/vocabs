@@ -1,22 +1,17 @@
 {
-  "tokens": [
+  "css": "true",
+  "basic": [
     {
       "name": "comment",
 	  "text": "Commentaar",
 	  "eng": "Comment",
       "url": "https://www.w3schools.com/css/css_comments.asp"
-    },
+	},
     {
-      "name": "rule-set",
-	  "text": "Regel Set",
-	  "eng": "Rule Set",
-      "url": "https://www.w3schools.com/css/css_syntax.asp"
-    },
-    {
-      "name": "block",
-	  "text": "Declaratie Blok",
-	  "eng": "Declaration block",
-      "url": "https://www.w3schools.com/css/css_syntax.asp"
+      "name": "media-query",
+	  "text": "Media query",
+	  "eng": "Media query",
+      "url": "https://www.w3schools.com/css/css3_mediaqueries.asp"
     },
     {
       "name": "selector",
@@ -25,30 +20,19 @@
     },
     {
       "name": "type-selector",
-	  "text": "Type selector",
+	  "text": "Selector op tag-naam",
+	  "eng": "Type selector",
       "url": "https://www.w3schools.com/css/css_selectors.asp"
     },
     {
       "name": "universal-selector",
-	  "text": "Alles selector",
+	  "text": "Selector op wildcard",
 	  "eng": "Universal selector",
       "url": "https://www.w3schools.com/css/css_selectors.asp"
     },
     {
-      "name": "id-selector",
-	  "text": "Selectie op ID",
-	  "eng": "ID selector",
-      "url": "https://www.w3schools.com/css/css_selectors.asp"
-    },
-    {
-      "name": "class-selector",
-	  "text": "Selectie op class",
-	  "eng": "Class selector",
-      "url": "https://www.w3schools.com/css/css_selectors.asp"
-    },
-    {
       "name": "attribute-selector",
-	  "text": "Selectie op attribuut",
+	  "text": "Selector op attribuut",
 	  "eng": "Attribute selector",
       "url": "https://www.w3schools.com/css/css_attribute_selectors.asp"
     },
@@ -56,35 +40,6 @@
       "name": "pseudo-class",
       "text": "Pseudo-class",
       "url": "https://www.w3schools.com/css/css_pseudo_classes.asp"
-    },
-    {
-      "name": "pseudo-element",
-      "text": "Pseudo-element",
-      "url": "https://www.w3schools.com/css/css_pseudo_elements.asp"
-    },
-    {
-      "name": "child-combinator",
-	  "text": "Kind van",
-	  "eng": "Child combinator",
-      "url": "https://www.w3schools.com/css/css_combinators.asp"
-    },
-    {
-      "name": "descendant-combinator",
-	  "text": "Kind (of kleinkind) van",
-	  "eng": "Descendant combinator",
-      "url": "https://www.w3schools.com/css/css_combinators.asp"
-    },
-    {
-      "name": "adjacent-sibling-combinator",
-	  "text": "Direct naastgelegen",
-	  "eng": "Adjacent sibling combinator",
-      "url": "https://www.w3schools.com/css/css_combinators.asp"
-    },
-    {
-      "name": "general-sibling-combinator",
-	  "text": "Indirect naastgelegen",
-	  "eng": "General sibling combinator",
-      "url": "https://www.w3schools.com/css/css_combinators.asp"
     },
     {
       "name": "declaration",
@@ -105,10 +60,78 @@
       "url": "https://www.w3schools.com/css/css_syntax.asp"
     },
     {
-      "name": "media-query",
-	  "text": "Media query",
-	  "eng": "Media query",
-      "url": "https://www.w3schools.com/css/css3_mediaqueries.asp"
+      "name": "percentage",
+      "eng": "Percentage",
+      "text": "Percentage",
+      "url": ""
+    },
+    {
+      "name": "length",
+      "eng": "Length",
+      "text": "Lengte",
+      "url": ""
+    },
+    {
+      "name": "color",
+      "eng": "Color",
+      "text": "Kleurcode",
+      "url": ""
+    }
+  ],
+  "advanced": [
+    {
+      "name": "at-rule",
+	  "text": "@-regel",
+	  "eng": "At-rule",
+      "url": ""
+    },
+    {
+      "name": "id-selector",
+	  "text": "Selector op ID",
+	  "eng": "ID selector",
+      "url": "https://www.w3schools.com/css/css_selectors.asp"
+    },
+    {
+      "name": "class-selector",
+	  "text": "Selector op class-naam",
+	  "eng": "Class selector",
+      "url": "https://www.w3schools.com/css/css_selectors.asp"
+    },
+    {
+      "name": "descendant-combinator",
+	  "text": "Combinator: child-elementen",
+	  "eng": "Descendant combinator",
+      "url": "https://www.w3schools.com/css/css_combinators.asp"
+    },
+    {
+      "name": "child-combinator",
+	  "text": "Combinator: directe child-elementen",
+	  "eng": "Child combinator",
+      "url": "https://www.w3schools.com/css/css_combinators.asp"
+    },
+    {
+      "name": "adjacent-sibling-combinator",
+	  "text": "Combinator: direct naast elkaar gelegen",
+	  "eng": "Adjacent sibling combinator",
+      "url": "https://www.w3schools.com/css/css_combinators.asp"
+    },
+    {
+      "name": "general-sibling-combinator",
+	  "text": "Combinator: naast elkaar gelegen",
+	  "eng": "General sibling combinator",
+      "url": "https://www.w3schools.com/css/css_combinators.asp"
+    },
+    {
+      "name": "unit",
+      "eng": "Unit",
+      "text": "Eenheid",
+      "url": ""
+    },
+    {
+      "name": "vendor-prefix",
+      "text": "Browser-prefix",
+      "eng": "Vendor prefix",
+      "url": ""
     }
   ]
 }

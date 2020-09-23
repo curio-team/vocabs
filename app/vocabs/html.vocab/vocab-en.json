@@ -1,5 +1,12 @@
 {
-  "tokens": [
+  "advanced": [
+	{
+	  "name": "dummy",
+	  "text": "Dummy",
+	  "url": ""
+	}
+  ],
+  "basic": [
     {
       "name": "i",
       "text": "Syntax",
