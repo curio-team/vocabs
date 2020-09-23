@@ -35,10 +35,17 @@
   function vocabTokensList($vocab) {
     $html = '';
     $html .= '<ul class="vocab-tokens-list">';
-	$html .= '<li class="header">Nederlands 🇳🇱<span class="eng">🇬🇧 🇺🇸 Engels</span></a></li>';
-    foreach ($vocab['tokens'] as $token) {
-    $html .= '<li><a class="vocab-token '.$token['name'].'" href="'.$token['url'].'"><span class="nl">'.$token['text'].'</span><span class="eng">' . $token['eng'] .'</span></a></li>';
-    }
+	if($vocab['css']) $html .= '<li class="header">Nederlands 🇳🇱<span class="eng">🇬🇧 🇺🇸 Engels</span></a></li>';
+	if($vocab['css']) $html .= '<li class="header basic">Basic</li>';
+    foreach ($vocab['basic'] as $token) {
+    	$html .= '<li><a class="vocab-token '.$token['name'].'" href="'.$token['url'].'"><span class="nl">'.$token['text'].'</span><span class="eng">' . $token['eng'] .'</span></a></li>';
+	}
+	if($vocab['css']) {
+		$html .= '<li class="header advanced">Advanced</li>';
+		foreach ($vocab['advanced'] as $token) {
+			$html .= '<li><a class="vocab-token '.$token['name'].'" href="'.$token['url'].'"><span class="nl">'.$token['text'].'</span><span class="eng">' . $token['eng'] .'</span></a></li>';
+		}
+	}
 
     $html .= '</ul>';
     return $html;
