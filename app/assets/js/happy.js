@@ -56,9 +56,11 @@ app.partyTime = function (vocab) {
   var supportsHashChange = 'onhashchange' in window;
 
   app.hiliteHash(location.hash);
-
   // Give all vocab-token elements in the code and sidebar a tabindex so they can be tabbed through
-  app.getTokenElements(vocab.tokens)
+  app.getTokenElements(vocab.basic)
+   .addClass('vocab-token')
+   .attr('tabindex', '0');
+  app.getTokenElements(vocab.advanced)
    .addClass('vocab-token')
    .attr('tabindex', '0');
 
@@ -69,7 +71,7 @@ app.partyTime = function (vocab) {
   });
 
   $(document).on('focus click', '.vocab-token', function(event) {
-    var tokenNames = app.getTokenNames(this);
+	var tokenNames = app.getTokenNames(this);
     var panel = $(this).closest('.vocab-content, .vocab-sidebar');
     event.preventDefault();
     event.stopPropagation();
