@@ -125,7 +125,7 @@
   "html": {
     "en": {
       "language": "English",
-      "title": "HTML Vocabulaire",
+      "title": "HTML Vocabulary",
       "help-text": "Click on the code or the sidebar to see which is what. Use the Tab key to browse via keyboard.",
       "credits": {
         "@sakamies": "http://twitter.com/sakamies"
@@ -198,6 +198,17 @@
       },
       "specs": {
         "Spesifikasi Sintaks HTML5": "https://w3c.github.io/html/syntax.html#syntax"
+      }
+    },
+    "nl": {
+      "language": "Nederlands",
+      "title": "HTML Vocabulaire",
+      "help-text": "Klik op de code of de zijbalk om te zien wat wat is. Gebruik de Tab-toets om te navigeren met het toetsenbord.",
+      "credits": {
+        "@sakamies": "http://twitter.com/sakamies"
+      },
+      "specs": {
+        "HTML5 Syntax Specification": "https://w3c.github.io/html/syntax.html#syntax"
       }
     }
   }

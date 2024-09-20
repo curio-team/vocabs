@@ -22,7 +22,7 @@
 
 		<div id="big-vocab-list">
 			<div class="vocab-link" id="html">
-				<a href="?name=html&lang=en">HTML</a>
+				<a href="?name=html&lang=nl">HTML</a>
 			</div>
 			<div class="vocab-link" id="css">
 				<a href="?name=css&lang=nl">CSS</a>

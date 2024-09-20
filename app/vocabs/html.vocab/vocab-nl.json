@@ -1,0 +1,132 @@
+{
+  "advanced": [
+    {
+      "name": "dummy",
+      "text": "Dummy",
+      "eng": "Dummy",
+      "url": ""
+    }
+  ],
+  "basic": [
+    {
+      "name": "i",
+      "text": "Syntaxis",
+      "eng": "Syntax",
+      "url": ""
+    },
+    {
+      "name": "doctype",
+      "text": "Doctype",
+      "eng": "Doctype",
+      "url": ""
+    },
+    {
+      "name": "element",
+      "text": "Element",
+      "eng": "Element",
+      "url": ""
+    },
+    {
+      "name": "tag",
+      "text": "Tag",
+      "eng": "Tag",
+      "url": ""
+    },
+    {
+      "name": "tag-name",
+      "text": "Tagnaam",
+      "eng": "Tag name",
+      "url": ""
+    },
+    {
+      "name": "start-tag",
+      "text": "Starttag",
+      "eng": "Start tag",
+      "url": ""
+    },
+    {
+      "name": "end-tag",
+      "text": "Eindtag",
+      "eng": "End tag",
+      "url": ""
+    },
+    {
+      "name": "attribute",
+      "text": "Attribuut",
+      "eng": "Attribute",
+      "url": ""
+    },
+    {
+      "name": "attribute-name",
+      "text": "Attribuutnaam",
+      "eng": "Attribute name",
+      "url": ""
+    },
+    {
+      "name": "attribute-value",
+      "text": "Attribuutwaarde",
+      "eng": "Attribute value",
+      "url": ""
+    },
+    {
+      "name": "comment",
+      "text": "Opmerking",
+      "eng": "Comment",
+      "url": ""
+    },
+    {
+      "name": "text",
+      "text": "Tekst",
+      "eng": "Text",
+      "url": ""
+    },
+    {
+      "name": "character-reference",
+      "text": "Karakterreferentie",
+      "eng": "Character reference",
+      "url": ""
+    },
+    {
+      "name": "i",
+      "text": "Structuur",
+      "eng": "Structure",
+      "url": ""
+    },
+    {
+      "name": "root",
+      "text": "Root",
+      "eng": "Root",
+      "url": ""
+    },
+    {
+      "name": "parent",
+      "text": "Ouder",
+      "eng": "Parent",
+      "url": ""
+    },
+    {
+      "name": "children",
+      "text": "Kinderen",
+      "eng": "Children",
+      "url": ""
+    },
+    {
+      "name": "child",
+      "text": "Kind",
+      "eng": "Child",
+      "url": ""
+    },
+    {
+      "name": "siblings",
+      "text": "Broers en zussen",
+      "eng": "Siblings",
+      "url": ""
+    },
+    {
+      "name": "sibling",
+      "text": "Broer of zus",
+      "eng": "Sibling",
+      "url": ""
+    }
+  ]
+}

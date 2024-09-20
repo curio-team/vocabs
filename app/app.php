@@ -36,7 +36,7 @@
   <div class="vocab-layout">
     <div class="vocab-modal">
       <?php
-        $showHelp = htmlspecialchars($_COOKIE['showHelp']);
+        $showHelp = isset($_COOKIE['showHelp']) ? htmlspecialchars($_COOKIE['showHelp']) : 'false';
         $helpState = '';
         if ($showHelp == 'false') {
           $helpState = 'display: none;';
@@ -77,7 +77,7 @@
 	  <a class="home" href="/" title="Terug naar homepage">🏠</a>
       <?php
         $vocabFile = 'vocabs/'.$vocabName.'.vocab/vocab-'.$locale.'.json';
-        $vocab = json_decode(file_get_contents($vocabFile),true);
+        $vocab = json_decode(file_get_contents($vocabFile), true);
         echo vocabTokensList($vocab);
       ?>
 
