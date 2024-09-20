@@ -118,13 +118,13 @@
     },
     {
       "name": "siblings",
-      "text": "Broers en zussen",
+      "text": "Naasten",
       "eng": "Siblings",
       "url": ""
     },
     {
       "name": "sibling",
-      "text": "Broer of zus",
+      "text": "Naaste",
       "eng": "Sibling",
       "url": ""
     }

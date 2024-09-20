@@ -6,23 +6,10 @@ The purpose of the app is to follow specifications closely, always preferring th
 
 Issues, forks and all manner of feedback welcome! If you improve the code and send a pull request, please try to keep the code boneheadedly simple and understandable.
 
-(For a quick conversation, tweet to [@sakamies](http://twitter.com/sakamies))
+## 🚧 Work in progress
 
+This project is a modified version of [sakamies/vocabs](https://github.com/sakamies/vocabs) and is currently a work in progress.
+While the original project used PHP, this project is a simple static site, so it can be hosted on GitHub Pages.
 
-## Making new vocabs
-
-First off, fork the repo. Then copy the template.vocab folder in /vocabs and name it according to the language you'd like to make a vocab for. You can of course host it by yourself, but I would appreciate a pull request for a new vocabulary, so they could all be in the same place.
-
-Run `grunt watch` to get automatic scss & haml parsing and livereload going. You'll need a server with php to run the app. `php -S localhost:8000` is fine for local development.
-
-### Vocabulary definition
-
-vocab-{locale}.json
-
-Vocab tokens accross translations should match. If there's a new vocab term that needs to be added, please make a new issue for it.
-
-### Sample code
-
-The vocab code sample (sample.haml->sample.html) is not a syntax highlighted bit of actual code, but a nested structure of vocabulary tokens. It was easier (for me anyway) to make a structure by hand than make a syntax highlighter tokenize everything just right.
-
-
+A lot of the functionality in the old project was removed to reduce complexity, such as the Grunt build process and scss files.
+Since reimplementing this (differently) is low priority, the project will likely remain in the current state for a while.

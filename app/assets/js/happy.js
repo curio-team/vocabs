@@ -35,9 +35,11 @@ app.hiliteTokens = function (tokenNames) {
 // Highlight token DOM elements according to URL hash
 app.hiliteHash = function (hash) {
   var tokenNames;
+  
   if (hash) {
     tokenNames = hash.substr(1).split('+');
   }
+
   if (tokenNames) {
     app.hiliteTokens(tokenNames);
   }
@@ -47,6 +49,7 @@ app.showHelp = function (argument) {
   $('.vocab-help').show();
   $.cookie('showHelp', 'true', { expires: 999, path: '/' });
 };
+
 app.hideHelp = function () {
   $('.vocab-help').hide();
   $.cookie('showHelp', 'false', { expires: 999, path: '/' });
@@ -56,22 +59,22 @@ app.partyTime = function (vocab) {
   var supportsHashChange = 'onhashchange' in window;
 
   app.hiliteHash(location.hash);
+
   // Give all vocab-token elements in the code and sidebar a tabindex so they can be tabbed through
   app.getTokenElements(vocab.basic)
-   .addClass('vocab-token')
-   .attr('tabindex', '0');
+    .addClass('vocab-token')
+    .attr('tabindex', '0');
   app.getTokenElements(vocab.advanced)
-   .addClass('vocab-token')
-   .attr('tabindex', '0');
-
-
+    .addClass('vocab-token')
+    .attr('tabindex', '0');
+  
   // Wire events
   $(window).on('hashchange', function () {
     app.hiliteHash(location.hash);
   });
 
-  $(document).on('focus click', '.vocab-token', function(event) {
-	var tokenNames = app.getTokenNames(this);
+  $(document).on('focus click', '.vocab-token', function (event) {
+    var tokenNames = app.getTokenNames(this);
     var panel = $(this).closest('.vocab-content, .vocab-sidebar');
     event.preventDefault();
     event.stopPropagation();
@@ -83,8 +86,9 @@ app.partyTime = function (vocab) {
     $('.vocab-selected').removeClass('vocab-selected');
     $(this).addClass('vocab-selected');
 
-    //Change hash to highlight the appropriate tokens automatically via hashchange event
+    // Change hash to highlight the appropriate tokens automatically via hashchange event
     location.hash = '#' + tokenNames.join('+');
+    
     if (!supportsHashChange) {
       $(window).trigger('hashchange');
     }
@@ -96,14 +100,14 @@ app.partyTime = function (vocab) {
   });
 
   // Key bindings
-  key('up', function(event){
+  key('up', function (event) {
     var vocabFocus = $('.vocab-tokens-list :focus');
     if (vocabFocus.length > 0) {
       event.preventDefault();
       vocabFocus.parent().prev().find('.vocab-token').focus();
     }
   });
-  key('down', function(event){
+  key('down', function (event) {
     var vocabFocus = $('.vocab-tokens-list :focus');
     if (vocabFocus.length > 0) {
       event.preventDefault();
@@ -111,12 +115,13 @@ app.partyTime = function (vocab) {
     }
   });
 
-  $('.vocab-help-hide').on('click', function(event) {
+  $('.vocab-help-hide').on('click', function (event) {
     event.preventDefault();
     app.hideHelp();
     $('.vocab-help-show').focus();
   });
-  $('.vocab-help-show').on('click', function(event) {
+
+  $('.vocab-help-show').on('click', function (event) {
     event.preventDefault();
     if ($('.vocab-help').css('display') === 'block') {
       app.hideHelp();
@@ -126,9 +131,3 @@ app.partyTime = function (vocab) {
     }
   });
 };
-
-$(document).ready(function() {
-
-  app.partyTime(app.vocab);
-
-});

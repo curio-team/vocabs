@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, user-scalable=yes">
+  <title id="page-title"></title>
+  <link href="assets/css/happy.css"
+        rel="stylesheet">
+  <link id="syntax-style"
+        rel="stylesheet" />
+
+  <script src="assets/lib/jquery-2.0.3.min.js"></script>
+  <script src="assets/lib/jquery.cookie.js"></script>
+  <script src="assets/lib/keymaster.js"></script>
+
+  <script>
+    window.app = {};
+
+    const flagIconMap = {
+      nl: '🇳🇱',
+      en: '🇺🇸',
+      es: '🇪🇸',
+      fr: '🇫🇷',
+      de: '🇩🇪',
+      zh_CN: '🇨🇳',
+      pt: '🇵🇹',
+      it: '🇮🇹',
+      ru: '🇷🇺',
+      ja: '🇯🇵',
+      ar: '🇸🇦',
+      hi: '🇮🇳',
+      se: '🇸🇪',
+    };
+
+    loadVocabMetaData();
+
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+    
+    let activeVocabName = getQueryParam('name');
+    let activeLocale = getQueryParam('lang');
+
+    if (!activeVocabName || !activeLocale) {
+      // Let's default to css for now
+      activeVocabName = 'css';
+      activeLocale = 'nl';
+    }
+
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    function setCookie(name, value, days) {
+      const date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
+    }
+
+    function loadVocabMetaData() {
+      $.getJSON('vocabs/vocabs.json', function (vocabs) {
+        const vocabTabs = document.getElementById('vocabTabs');
+
+        for (const vocabName in vocabs) {
+          const vocab = vocabs[vocabName];
+          const vocabTab = document.createElement('a');
+          vocabTab.className = 'vocab-tab';
+          vocabTab.href = `?name=${vocabName}&lang=nl`; // TODO: Language select
+          vocabTab.innerText = vocabName;
+
+          if (vocabName === activeVocabName) {
+            vocabTab.classList.add('active');
+          }
+
+          vocabTabs.appendChild(vocabTab);
+        }
+
+        loadVocabFromUrl(vocabs);
+      });
+    }
+
+    function loadVocab(vocabs, vocabName, locale) {
+      const vocabMetaData = vocabs[vocabName][locale];
+
+      $.getJSON(`vocabs/${vocabName}.vocab/vocab-${locale}.json`, function (vocab) {
+        document.getElementById('page-title').innerText = vocabMetaData.title;
+        document.querySelector('.vocab-title').innerText = vocabMetaData.title;
+        document.querySelector('.vocab-help-text').innerText = vocab['help-text'];
+        document.querySelector('.vocab-tokens-list').innerHTML = generateVocabTokensList(vocab);
+
+        $('.vocab-code').load(`vocabs/${vocabName}.vocab/sample.html`);
+
+        app.partyTime(vocab);
+      });
+    }
+
+    // Only call this after the meta data has already loaded
+    function loadVocabFromUrl(vocabs) {
+      loadVocab(vocabs, activeVocabName, activeLocale);
+
+      // Load CSS dynamically
+      const syntaxStyle = document.getElementById('syntax-style');
+      syntaxStyle.href = `vocabs/${activeVocabName}.vocab/syntax.css`;
+
+      // Show/hide help based on cookie
+      const showHelp = getCookie('showHelp') || 'false';
+      if (showHelp === 'false') {
+        document.querySelector('.vocab-help').style.display = 'none';
+      }
+
+      // Hide help button
+      document.querySelector('.vocab-help-hide').addEventListener('click', function () {
+        document.querySelector('.vocab-help').style.display = 'none';
+        setCookie('showHelp', 'false', 30);
+      });
+    }
+
+    function generateCredits(credits) {
+      return credits.map(credit => `<a href="${credit.url}">${credit.name}</a>`).join(' ');
+    }
+
+    function generateVocabTokensList(vocab) {
+      let html = '<ul>';
+      html += '<li class="header">Nederlands 🇳🇱<span class="eng">🇺🇸 Engels</span></li>';
+
+      vocab.basic.forEach(token => {
+        html += `<li><a class="vocab-token ${token.name}" href="${token.url}">
+                  <span class="nl">${token.text}</span>
+                  <span class="eng">${token.eng || ''}</span></a></li>`;
+      });
+
+      if (vocab.advanced) {
+        html += '<li class="header advanced">Advanced</li>';
+        vocab.advanced.forEach(token => {
+          html += `<li><a class="vocab-token ${token.name}" href="${token.url}">
+                    <span class="nl">${token.text}</span>
+                    <span class="eng">${token.eng || ''}</span></a></li>`;
+        });
+      }
+
+      html += '</ul>';
+      return html;
+    }
+  </script>
+
+  <script src="assets/js/happy.js"></script>
+</head>
+
+<body>
+  <div class="vocab-header">
+    <div class="vocab-header-tabs"
+         id="vocabTabs">
+      <!-- TODO: <a class="vocab-header-help" title="Show help" data-static>?</a> -->
+    </div>
+  </div>
+
+  <div class="vocab-layout">
+    <div class="vocab-content">
+      <code class="vocab-code"></code>
+    </div>
+
+    <div class="vocab-sidebar">
+      <div class="vocab-tokens-list-header">
+        <h1 class="vocab-title"></h1>
+      </div>
+      <div class="vocab-tokens-list"></div>
+    </div>
+  </div>
+
+  <div class="vocab-modal">
+    <div class="vocab-help">
+      <h1 class="vocab-title"></h1>
+      <p class="vocab-credits"></p><br>
+      <p class="vocab-help-text"></p><br>
+      <div class="vocab-help-hide"
+           title="Close help">Close</div><br>
+      <hr><br>
+      <a href="https://github.com/sakamies/vocabs/issues/new">Report an issue</a><br>
+      <a href="https://github.com/sakamies/vocabs/fork">Create a vocab or translation</a><br><br>
+      <a href="/">Vocabs</a> by <a href="http://twitter.com/sakamies">@sakamies</a> / <a
+         href="http://twitter.com/workflower">@workflower</a><br>
+    </div>
+  </div>
+</body>
+
+</html>
